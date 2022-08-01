@@ -1,0 +1,30 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model ProductModel
+<div class="mt-4">
+            <form asp-action="UpdateProduct" asp-controller="Products" method="post" class="p-4 w-75 mx-auto">
+                <div class="mb-3">
+                    <label class="mb-1">Ürün Adı:</label>
+                    <input type="text" asp-for="@Model.Name" class="form-control" />
+                </div>
+                <div class="mb-3">
+                    <label class="mb-1">Ürün Fiyatı:</label>
+                    <input type="number" step="any" asp-for="@Model.Price" class="form-control" />
+                </div>
+                <div class="mb-3">
+                    <label class="mb-1">Ürün Açıklaması:</label>
+                    <input type="text" asp-for="@Model.Description" class="form-control" />
+                </div>
+                <div class="mb-3">
+                    <label class="mb-1">Ürün Stok:</label>
+                    <input type="number" asp-for="@Model.Stock" class="form-control" />
+                </div>
+                <input type="hidden" asp-for="@Model.Id" class="form-control" />
+                <div class="mb-3 text-end">
+                    <button type="submit" class="btn btn-primary">Ürün Güncelle!</button>
+                </div>
+                <div class="text-danger" asp-validation-summary="All">
+                </div>
+            </form>
+        </div>

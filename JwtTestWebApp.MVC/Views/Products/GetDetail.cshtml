@@ -1,0 +1,16 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model ProductModel
+<div class="container mt-10">
+        <strong>Ürün Adı : </strong> @Model.Name
+        <br />
+        <strong>Ürün Fiyatı : </strong> @Model.Price
+        <br />
+        <strong>Ürün Açıklaması : </strong> @Model.Description
+        <br />
+        <strong>Ürün Stok : </strong> @Model.Stock
+    </div>
+    <div class="mb-3 mt-3 text-end">
+        <a class="btn btn-primary" asp-action="GetAll" asp-controller="Products" role="button">Geri Dön!</a>
+    </div>

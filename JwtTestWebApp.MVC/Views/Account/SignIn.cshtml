@@ -1,0 +1,22 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model UserModel
+<div class="mt-4">
+        <form asp-action="SignIn" asp-controller="Account" method="post" class="p-4 w-75 mx-auto">
+            <div class="mb-3">
+                <label class="mb-1">Kullanıcı Adı:</label>
+                <input type="text" asp-for="@Model.UserName" class="form-control" />
+            </div>
+            <div class="mb-3">
+                <label class="mb-1">Şifreniz:</label>
+                <input type="password" asp-for="@Model.Password" class="form-control" />
+            </div>
+            <div class="mb-3 text-end">
+                <button type="submit" class="btn btn-primary">Giriş Yap</button>
+            </div>
+            <div class="text-danger" asp-validation-summary="All">
+
+            </div>
+        </form>
+    </div>
